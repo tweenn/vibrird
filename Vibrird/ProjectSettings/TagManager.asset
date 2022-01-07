@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pipe
   - Pit
+  - Score
   layers:
   - Default
   - TransparentFX
