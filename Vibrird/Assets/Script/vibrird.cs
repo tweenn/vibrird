@@ -73,9 +73,13 @@ public class vibrird : MonoBehaviour
 
     private void IsOffScreen()
     {
-        if (this.transform.position.y >= 4f)
+        if (this.transform.position.y > 4f)
         {
             this.transform.position = new Vector3(birdPositionX, 4f, 0f);
+        }
+        else if (this.transform.position.y < -6.5f)
+        {
+            this.transform.position = new Vector3(birdPositionX, -6.5f, 0f);
         }
     }
 
