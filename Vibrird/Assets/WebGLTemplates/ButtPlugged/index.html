@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes"
+		/>
+		<title>{{{ PRODUCT_NAME }}}</title>
+	</head>
+	<body style="text-align: center">
+		<script src="Build/{{{ LOADER_FILENAME }}}"></script>
+		<script>
+			const unityConfiguration = {
+				canvas: {
+					width: '{{{ WIDTH }}}',
+					height: '{{{ HEIGHT }}}',
+					background: {
+						filename: '{{{BACKGROUND_FILENAME}}}',
+						color: '{{{BACKGROUND_COLOR}}}'
+					}
+				},
+				instance: {
+					dataUrl: 'Build/{{{ DATA_FILENAME }}}',
+					frameworkUrl: 'Build/{{{ FRAMEWORK_FILENAME }}}',
+					codeUrl: 'Build/{{{ CODE_FILENAME }}}',
+				#if MEMORY_FILENAME
+					memoryUrl: 'Build/{{{ MEMORY_FILENAME }}}',
+				#endif
+				#if SYMBOLS_FILENAME
+					symbolsUrl: 'Build/{{{ SYMBOLS_FILENAME }}}',
+				#endif
+					streamingAssetsUrl: 'StreamingAssets',
+					companyName: '{{{ COMPANY_NAME }}}',
+					productName: '{{{ PRODUCT_NAME }}}',
+					productVersion: '{{{ PRODUCT_VERSION }}}',
+					// matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+					// devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+				}
+			};
+		</script>
+		<script
+			lang="javascript"
+			src="https://cdn.jsdelivr.net/npm/buttplug@1.0.1/dist/web/buttplug.min.js"
+		></script>
+		<script src="/TemplateData/js/main.js" type="module" defer></script>
+	</body>
+</html>
