@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3987087119723364544}
   - component: {fileID: 8862484105375984866}
   - component: {fileID: 348342942}
+  - component: {fileID: 348342943}
   m_Layer: 0
   m_Name: bird_prefab
   m_TagString: Untagged
@@ -74,12 +75,25 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.25
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 1
+--- !u!114 &348342943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057118511348974744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9de08bcff7b4643a1b1ad839d2f22ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceUp: 2
 --- !u!1 &8862484105200194169
 GameObject:
   m_ObjectHideFlags: 0
